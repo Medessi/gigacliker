@@ -1,0 +1,123 @@
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="GigaClicker Pro - Collectez des Giga Internet facilement en effectuant des actions simples sur des sites partenaires. Gagnez des points et échangez-les contre des Gigas.">
+    <meta name="keywords" content="Giga Internet, points, récompenses, GigaClicker, internet gratuit, collecter des Gigas, sites partenaires">
+    <meta name="author" content="VotreNom">
+    <meta name="theme-color" content="#4A90E2">
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="GigaClicker Pro - Collectez des Giga Internet">
+    <meta property="og:description" content="Gagnez des points sur des sites partenaires et échangez-les contre des Giga Internet.">
+    <meta property="og:image" content="/images/preview.png"> <!-- Mettez à jour le chemin de votre image -->
+    <meta property="og:url" content="https://votresite.com"> <!-- Mettez à jour avec l'URL de votre site -->
+    <meta property="og:type" content="website">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GigaClicker Pro - Collectez des Giga Internet">
+    <meta name="twitter:description" content="Effectuez des actions sur des sites partenaires et recevez des Giga Internet en récompense.">
+    <meta name="twitter:image" content="/images/preview.png"> <!-- Mettez à jour le chemin de votre image -->
+
+    <!-- Icons for mobile devices -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+    <!-- Preconnect to Google Fonts for better performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Stylesheets and fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Title of the webpage -->
+    <title>GigaClicker Pro - Collectez des Giga Internet</title>
+
+    <!-- Performance optimization -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="loginScreen">
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Nom d'utilisateur" required>
+            <input type="tel" id="phone" placeholder="Numéro de téléphone" required>
+            <select id="operator" required>
+                <option value="">Sélectionnez l'opérateur</option>
+                <option value="orange">Orange</option>
+                <option value="sfr">SFR</option>
+                <option value="free">Free</option>
+                <option value="bouygues">Bouygues</option>
+            </select>
+            <input type="password" id="password" placeholder="Mot de passe" required>
+            <button type="submit" id="loginButton">S'inscrire / Se connecter</button>
+        </form>
+    </div>
+
+    <div id="gameScreen" style="display:none;">
+        <div id="counter">0 points</div>
+        <div id="gigaCounter">0 Giga Internet</div>
+        <button id="clickerButton">CLIQUEZ !</button>
+        <button id="convertButton">Convertir en Giga Internet</button>
+        
+        <div id="shareButtons">
+            <button id="whatsappShare" class="shareButton"><i class="fab fa-whatsapp"></i> Partager</button>
+            <button id="facebookShare" class="shareButton"><i class="fab fa-facebook-f"></i> Partager</button>
+        </div>
+        
+        <div id="leaderboard">
+            <h3>Classement</h3>
+            <ul id="leaderboardList"></ul>
+        </div>
+    </div>
+
+    <div id="tutorialPopup" class="popup">
+        <div class="popup-content">
+            <h2>Bienvenue sur GigaClicker Pro!</h2>
+            <p>Votre mission: Cliquez rapidement pour gagner des points et les convertir en Giga Internet, vous perdez rien jouez et tenter votre chance 🤞 !</p>
+            <ul>
+                <li>Cliquez sur le bouton central pour gagner des points</li>
+                <li>Partagez avec 5 amis sur WhatsApp pour débloquer la conversion</li>
+                <li>Convertissez 100 points en 1 Giga Internet</li>
+                <li>Grimpez dans le classement et devenez le meilleur clicker!</li>
+            </ul>
+            <button id="closeTutorial">Compris, allons-y!</button>
+        </div>
+    </div>
+
+    <div id="alertPopup" class="gamer-popup">
+        <div class="gamer-popup-content">
+            <h2 id="alertTitle"></h2>
+            <p id="alertMessage"></p>
+            <button class="gamer-popup-button" onclick="closePopup('alertPopup')">OK</button>
+        </div>
+    </div>
+
+    <div id="achievementPopup" class="gamer-popup">
+        <div class="gamer-popup-content">
+            <h2>Succès débloqué !</h2>
+            <p id="achievementMessage"></p>
+            <button class="gamer-popup-button" onclick="closePopup('achievementPopup')">Génial !</button>
+        </div>
+    </div>
+
+    <div id="tipContainer"></div>
+
+    <canvas id="particles"></canvas>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>
