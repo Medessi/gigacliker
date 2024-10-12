@@ -205,7 +205,7 @@ if (window.location.pathname === '') { // Assurez-vous que l'URL est correcte
     handleCallback();
 }
 function shareOnWhatsApp() {
-    const message = encodeURIComponent(`Je joue à GigaClicker ! J'ai déjà ${points} points et ${gigaInternet} Giga Internet. Rejoins-moi sur https://bit.ly/3U40rv7 !`);
+    const message = encodeURIComponent(`Je joue à GigaClicker et c'est addictif ! 😄 J'ai déjà accumulé ${points} points et ${gigaInternet} Giga d'Internet. Peux-tu faire mieux ? 💪 Rejoins-moi et tente de gagner du forfait internet en jouant https://bit.ly/3U40rv7. Offre valable uniquement en Afrique de l'ouest '🎁`);
     window.open(`https://wa.me/?text=${message}`, '_blank');
     shareCount++;
     updateCounters();
