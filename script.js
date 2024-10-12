@@ -159,7 +159,7 @@ whatsappShareButton.addEventListener('click', () => {
 // Fonction pour rediriger vers le site partenaire avec un callback
 function redirectToPartnerSite(pointsToConvert) {
     const userID = username; // Identifier l'utilisateur actuel
-    const callbackUrl = encodeURIComponent(`https://gigaclicker.app/callback?points=${pointsToConvert}&user=${userID}`);
+    const callbackUrl = encodeURIComponent(`https://bit.ly/3U40rv7/callback?points=${pointsToConvert}&user=${userID}`);
     const partnerUrl = `https://gigaconnex.onrender.com?points=${pointsToConvert}&user=${userID}&callback=${callbackUrl}`;
     
     window.location.href = partnerUrl; // Rediriger vers le site partenaire
@@ -205,7 +205,7 @@ if (window.location.pathname === '') { // Assurez-vous que l'URL est correcte
     handleCallback();
 }
 function shareOnWhatsApp() {
-    const message = encodeURIComponent(`Je joue à GigaClicker ! J'ai déjà ${points} points et ${gigaInternet} Giga Internet. Rejoins-moi sur https://gigaclicker.ap !`);
+    const message = encodeURIComponent(`Je joue à GigaClicker ! J'ai déjà ${points} points et ${gigaInternet} Giga Internet. Rejoins-moi sur https://bit.ly/3U40rv7 !`);
     window.open(`https://wa.me/?text=${message}`, '_blank');
     shareCount++;
     updateCounters();
