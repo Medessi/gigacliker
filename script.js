@@ -205,14 +205,14 @@ if (window.location.pathname === '') { // Assurez-vous que l'URL est correcte
     handleCallback();
 }
 function shareOnWhatsApp() {
-    const message = encodeURIComponent(`Je joue à GigaClicker ! J'ai déjà ${points} points et ${gigaInternet} Giga Internet. Rejoins-moi sur https://gigaclicker.app !`);
+    const message = encodeURIComponent(`Je joue à GigaClicker ! J'ai déjà ${points} points et ${gigaInternet} Giga Internet. Rejoins-moi sur https://gigaclicker.ap !`);
     window.open(`https://wa.me/?text=${message}`, '_blank');
     shareCount++;
     updateCounters();
 }
 
         facebookShareButton.addEventListener('click', () => {
-            const url = encodeURIComponent('https://gigaclicker.app');
+            const url = encodeURIComponent("https://bit.ly/3U40rv7");
             window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
         });
 
